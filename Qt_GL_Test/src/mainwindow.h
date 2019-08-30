@@ -17,6 +17,9 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
+public slots:
+    void slot_addItemToListWidget();
+
 private slots:
     void on_actionQuit_triggered();
 

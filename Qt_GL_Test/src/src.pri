@@ -9,7 +9,8 @@ SOURCES += \
     $$PWD/shaderprogram.cpp \
     $$PWD/utils.cpp \
     $$PWD/scene/samplequad.cpp \
-    $$PWD/scene/samplewire.cpp
+    $$PWD/scene/samplewire.cpp \
+    $$PWD/mylistwidget.cpp
 
 HEADERS += \
     $$PWD/la.h \
@@ -19,4 +20,5 @@ HEADERS += \
     $$PWD/shaderprogram.h \
     $$PWD/utils.h \
     $$PWD/scene/samplequad.h \
-    $$PWD/scene/samplewire.h
+    $$PWD/scene/samplewire.h \
+    $$PWD/mylistwidget.h

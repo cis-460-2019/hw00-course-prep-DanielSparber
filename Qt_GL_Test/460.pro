@@ -4,9 +4,11 @@ TARGET = 277
 TEMPLATE = app
 CONFIG += console
 CONFIG += c++11
-LIBS += -lopengl32
-LIBS += -lglut32
-LIBS += -lglu32
+win32 {
+    LIBS += -lopengl32
+    LIBS += -lglut32
+    LIBS += -lglu32
+}
 CONFIG += warn_on
 CONFIG += debug
 
@@ -43,3 +45,5 @@ address_sanitizer {
     QMAKE_CXXFLAGS += -fsanitize=address
     QMAKE_LFLAGS += -fsanitize=address
 }
+
+HEADERS +=

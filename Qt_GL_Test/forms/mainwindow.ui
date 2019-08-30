@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>640</width>
-    <height>480</height>
+    <width>336</width>
+    <height>464</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -15,8 +15,55 @@
   </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QGridLayout" name="gridLayout">
-    <item row="0" column="0">
-     <widget class="MyGL" name="mygl"/>
+    <item row="1" column="1">
+     <widget class="QSpinBox" name="spinBox">
+      <property name="minimum">
+       <number>-10</number>
+      </property>
+      <property name="maximum">
+       <number>10</number>
+      </property>
+      <property name="singleStep">
+       <number>2</number>
+      </property>
+      <property name="value">
+       <number>3</number>
+      </property>
+      <property name="displayIntegerBase">
+       <number>2</number>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="2">
+     <widget class="QLabel" name="middleLable">
+      <property name="text">
+       <string>MIDDLE</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="2">
+     <widget class="QLabel" name="topLabel">
+      <property name="text">
+       <string>TOP</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="2">
+     <widget class="QLabel" name="bottomLable">
+      <property name="text">
+       <string>BOTTOM</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QPushButton" name="pushButton">
+      <property name="text">
+       <string>PushButton</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <widget class="MyListWidget" name="listWidget"/>
     </item>
    </layout>
   </widget>
@@ -25,8 +72,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>640</width>
-     <height>19</height>
+     <width>336</width>
+     <height>22</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
@@ -49,9 +96,9 @@
  <layoutdefault spacing="6" margin="11"/>
  <customwidgets>
   <customwidget>
-   <class>MyGL</class>
-   <extends>QOpenGLWidget</extends>
-   <header>mygl.h</header>
+   <class>MyListWidget</class>
+   <extends>QListWidget</extends>
+   <header>mylistwidget.h</header>
   </customwidget>
  </customwidgets>
  <resources/>

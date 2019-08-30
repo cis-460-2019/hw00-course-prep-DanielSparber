@@ -7,12 +7,20 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    ui->mygl->setFocus();
+
+    connect(ui->pushButton, SIGNAL(clicked(bool)), ui->spinBox, SLOT(stepUp()));
+    connect(ui->pushButton, SIGNAL(clicked(bool)), this, SLOT(slot_addItemToListWidget()));
+
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
+}
+
+void MainWindow::slot_addItemToListWidget() {
+    QListWidgetItem* item = new QListWidgetItem(QString("NEW ITEM"));
+    ui->listWidget->addItem(item);
 }
 
 void MainWindow::on_actionQuit_triggered()
